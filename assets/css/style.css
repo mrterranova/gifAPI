@@ -1,0 +1,193 @@
+@font-face { font-family: chocolate\ cake; src: url("../css/chocolate-cake/chocolate\ cake.ttf")} 
+@font-face { font-family: Splendor; src: url("../css/Splendor-PersonalUse.ttf")}
+@font-face { font-family: MilkyWay; src: url("../css/MilkyWay/MilkyWay.ttf")}
+
+/* background dynamic image */
+body {
+        background-image: linear-gradient(to bottom right, rgb(42, 202, 175), rgb(59, 187, 59));
+        background-repeat: no-repeat;
+        background-size: 2500px 2000px;
+
+}
+.backgroundContainer {
+    position: absolute;
+    z-index: -1;
+    overflow:hidden;
+    height: 200%;
+    width:100%;
+}
+.wordImg {
+    position: absolute;
+    z-index: -1;
+    overflow:hidden;
+    transform: rotate(-40deg);
+    font-family: chocolate\ cake;
+    color: rgb(69, 148, 109);
+    opacity:.2;
+    font-size: 70px;
+    width:170%;
+    height:300%;
+    margin-top: -620px;
+    margin-left: 300px;
+}
+
+/* main source for the material */
+.container {
+    width: 80%;
+}
+.gifContainer {
+    background-color: rgb(58, 138, 124);
+    opacity: .3;
+    height: 940px;
+    width:80%;
+    padding:20px;
+    margin-top: 10px;
+    border-radius: 15px;
+    position: absolute;
+    z-index: -1;
+}
+#eachGif {
+    padding: 10px;
+    height:200px;
+}
+.whereBtn {
+    background:wheat;
+    opacity: .3;
+    margin-top:5px;
+    border-radius: 15px;
+    width:80%;
+    height:215px;
+    position: absolute;
+}
+#createBtns {
+    margin-top:10px;
+    height: 100px;
+    width:80%;
+    overflow: auto;
+}
+.topTextSpace {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    font-size: 15px;
+}
+#clue {
+    font-family: Splendor;
+    font-size: 23px;
+}
+.icon {
+    margin-top: 10px;
+    margin-left: 25%;
+    max-height: 80px;
+}
+#giphyUpload {
+    padding:5px;
+}
+
+
+/* Extras for the scroll bar */
+body::-webkit-scrollbar {
+    width: 2em;
+}
+body::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.377);
+}
+ 
+body::-webkit-scrollbar-thumb {
+    background-color: rgb(95, 95, 95);
+    outline: 1px solid rgb(189, 189, 189);
+}
+
+/* button selections and input for limit and submit */
+#userInput {
+    margin-top: 30px;
+    width:100%;
+}
+#submitBtn {
+    margin-top: 5px;
+    margin-left: 20%;
+    padding:7px;
+    width: 110px;
+    border-radius: 5px;
+    border: 2px solid rgb(58, 138, 124);
+    background-color: rgb(114, 154, 207);
+}
+
+#limit {
+    margin-left: 30%;
+    margin-top: 5px;
+    border: 2px solid rgb(58, 138, 124);
+    background-color: rgb(114, 154, 207);
+}
+
+.newBtn{
+    margin:1px;
+}
+
+/* This is the hidden section. Everything in here appears when user discovers the correct word */
+.hiddenBadges{
+    position:absolute;
+    display: flex;
+    flex-flow: column;
+}
+.badgeEarned {
+    float:left;
+    max-width: 70px;
+    max-height: 70px;
+}
+.hiddenBackground {
+    height:100%; 
+    width:100%;
+    position:absolute; 
+    z-index: -1; 
+    background: url(../images/nightsky.jpg);
+    opacity:0;
+}
+
+.hiddenBackgroundImage {
+    position:absolute;
+    height: 960px;
+    width: 960px;
+    margin-top: 10%;
+    opacity:0;
+    -webkit-animation: rotation 70s infinite linear;
+}
+@-webkit-keyframes rotation {
+    from {
+            -webkit-transform: rotate(0deg);
+    }
+    to {
+            -webkit-transform: rotate(359deg);
+    }
+}
+  
+.imageHidden {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+
+/* media responsive */
+@media only screen and (max-width: 760px){
+    .wordImg {
+        width:300%;
+        height:400%;
+        margin-top: -770px;
+        margin-left: 600px;
+    }
+    .backgroundContainer {
+        height: 220%;
+    }
+}
+
+@media only screen and (max-width: 690px){
+    .wordImg {
+        width:300%;
+        height:400%;
+        margin-top: -870px;
+        margin-left: 600px;
+    }
+    .backgroundContainer {
+        height: 220%;
+    }
+}
