@@ -22,13 +22,13 @@ body {
     overflow:hidden;
     transform: rotate(-40deg);
     font-family: chocolate\ cake;
-    color: rgb(69, 148, 109);
-    opacity:.2;
-    font-size: 70px;
+    opacity:0.3;
     width:170%;
     height:300%;
     margin-top: -620px;
     margin-left: 300px;
+    font-size: 72px;
+    color: rgb(255, 170, 42);
 }
 
 /* main source for the material */
@@ -104,7 +104,14 @@ body::-webkit-scrollbar-thumb {
 }
 #submitBtn {
     margin-top: 5px;
-    margin-left: 20%;
+    padding:7px;
+    width: 110px;
+    border-radius: 5px;
+    border: 2px solid rgb(58, 138, 124);
+    background-color: rgb(114, 154, 207);
+}
+#clearBtn{
+    margin-top: 5px;
     padding:7px;
     width: 110px;
     border-radius: 5px;

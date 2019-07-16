@@ -78,7 +78,6 @@ $("#inputForm").on("submit", function (event) {
     }
   }
 
-
 //website and key for giphy API
   var gifURL = "https://api.giphy.com/v1/gifs/search?q=" +
     userWord + "&api_key=BkaUZZWcFij6J7AoQj3WtPb1R2p9O6V9&limit=10";
@@ -107,6 +106,11 @@ $("#inputForm").on("submit", function (event) {
 
   });
 
+});
+
+//clear button clears all gifs at bottom
+$("clearBtn").on("click", function () {
+  $("#giphyUpload").remove();
 });
 
 //new buttons appear can now be clicked and go through same parameters as before. However instead of user word/value information has been stored in secret-data.
@@ -149,8 +153,6 @@ $("#giphyUpload").on("click", "#eachGif", function () {
     $(this).attr("src", still);
     $(this).attr("data-state", "still");
   }
-
-
 });
 
 //array of selected keyterms hidden at bottom in case there are any cheaters!
