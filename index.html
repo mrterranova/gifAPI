@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>API Giphy</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+</head>
+
+<body>
+    <div class="backgroundContainer">
+        <div class="background">
+            <div class="hiddenTheme">
+                <div class="hiddenBackground"></div>
+                <div class="imageHidden">
+                    <img class="hiddenBackgroundImage" src="assets/images/spiralGalaxy.png">
+                </div>
+                <div class="hiddenBadges" style=" height:100%; width:100px; position: absolute; z-index: auto;"></div>
+                <div class="hiddenBadges2"
+                    style="height:100%; width:100px; position: absolute; z-index: auto; margin-left:92%;"></div>
+            </div>
+            <p class="wordImg">Find my <span id="word">word</span>. Find my <span id="word">word</span>. Find my <span
+                    id="word">word</span>. Find my <span id="word">word</span>.
+                Find my <span id="word">word</span>. Find my <span id="word">word</span>. Find my <span
+                    id="word">word</span>. Find my <span id="word">word</span>.
+                Find my <span id="word">word</span>. Find my <span id="word">word</span>. Find my <span
+                    id="word">word</span>. Find my <span id="word">word</span>.
+                Find my <span id="word">word</span>. Find my <span id="word">word</span>. Find my <span
+                    id="word">word</span>. Find my <span id="word">word</span>.
+                Find my <span id="word">word</span>. Find my <span id="word">word</span>. Find my <span
+                    id="word">word</span>. Find my <span id="word">word</span>.
+                Find my <span id="word">word</span>. Find my <span id="word">word</span>. Find my <span
+                    id="word">word</span>. Find my <span id="word">word</span>.
+                Find my <span id="word">word</span>. Find my <span id="word">word</span>. Find my <span
+                    id="word">word</span>. Find my <span id="word">word</span>.
+                Find my <span id="word">word</span>. Find my <span id="word">word</span>. Find my <span
+                    id="word">word</span>. Find my <span id="word">word</span>.
+                Find my <span id="word">word</span>. Find my <span id="word">word</span>. Find my <span
+                    id="word">word</span>. Find my <span id="word">word</span>.
+                Find my <span id="word">word</span>. Find my <span id="word">word</span>. Find my <span
+                    id="word">word</span>. Find my <span id="word">word</span>.
+                Find my <span id="word">word</span>. Find my <span id="word">word</span>. Find my <span
+                    id="word">word</span>. Find my <span id="word">word</span>.
+                Find my <span id="word">word</span>. Find my <span id="word">word</span>. Find my <span
+                    id="word">word</span>. Find my <span id="word">word</span>.
+                Find my <span id="word">word</span>. Find my <span id="word">word</span>. Find my <span
+                    id="word">word</span>. Find my <span id="word">word</span>.
+                Find my <span id="word">word</span>. Find my <span id="word">word</span>. Find my <span
+                    id="word">word</span>. Find my <span id="word">word</span>.
+                Find my <span id="word">word</span>. Find my <span id="word">word</span>. Find my <span
+                    id="word">word</span>. Find my <span id="word">word</span>.
+                Find my <span id="word">word</span>. Find my <span id="word">word</span>. Find my <span
+                    id="word">word</span>. Find my <span id="word">word</span>.
+                Find my <span id="word">word</span>. Find my <span id="word">word</span>. Find my <span
+                    id="word">word</span>. Find my <span id="word">word</span>.
+                Find my <span id="word">word</span>. Find my <span id="word">word</span>. Find my <span
+                    id="word">word</span>. Find my <span id="word">word</span>.
+                Find my <span id="word">word</span>. Find my <span id="word">word</span>. Find my <span
+                    id="word">word</span>. Find my <span id="word">word</span>.
+            </p>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="whereBtn"></div>
+            <div class="col-sm-2">
+                <img class="icon" id="gif" src="assets/images/giphyLogo.gif" alt="">
+            </div>
+            <div class="col-lg-9" id="createBtns"></div>
+        </div>
+        <div class="row">
+            <div class="col-md-8 topTextSpace">
+                Let the clues direct you to a secret theme you can unlock. <br>
+                <p id="clue">I’m bright but I’m not clever. I burn but I’m not a bonfire. I sound like I’m a celebrity
+                    but I’m not famous.</p>
+            </div>
+            <div class="col-md-4">
+                <div class="row">
+                    <form id="inputForm">
+                        <div class="col-lg-12">
+                            <input type="text" id="userInput">
+                        </div>
+                        <div class="col-lg-12">
+                            <button type="submit" id="submitBtn">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+        </div>
+        <div class="row">
+            <div class="col-lg-12 gifContainer"></div>
+            <div class="col-lg-12" id="giphyUpload"></div>
+        </div>
+        <br>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="assets/javascript/javascript.js" charset="utf-8"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.4.1.js"
+            integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+</body>
+
+</html>
