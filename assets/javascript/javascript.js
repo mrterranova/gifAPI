@@ -6,7 +6,8 @@ console.log(" If you solved it, you're exempt from guilt. If you came here for c
 
 //click event for the submit button (also functionality for press 'enter' key)
 $("#inputForm").on("submit", function (event) {
-  $("#giphyUpload").empty();
+  $("#giphyUpload1").empty();
+  $("#giphyUpload2").empty();
   event.preventDefault();
   var userWord = $("#userInput").val().trim();
   $("#userInput").val("");
@@ -73,6 +74,7 @@ $("#inputForm").on("submit", function (event) {
           $(".whereBtn").css("opacity","0.5");
           $(".newBtn").css("background-color", "black");
           $(".newBtn").css("color", "white");
+          $("p").css("color", "white");
         }
       }
     }
@@ -129,15 +131,17 @@ $("#inputForm").on("submit", function (event) {
 
 //clear button clears all gifs at bottom
 $("clearBtn").on("click", function () {
-  $("#giphyUpload").remove();
+  $("#giphyUpload1").remove();
+  $("#giphyUpload2").remove();
 });
 
 //new buttons appear can now be clicked and go through same parameters as before. However instead of user word/value information has been stored in secret-data.
 $("#createBtns").on("click", ".newBtn", function () {
-  $("#giphyUpload").empty();
+  $("#giphyUpload1").empty();
+  $("#giphyUpload2").empty();
   var userWord = $("#userInput").val().trim();
   userData = $(this).attr("data-secret");
-  $("#word").html(userData);
+  $("span").html(userData);
 
   var gifURL = "https://api.giphy.com/v1/gifs/search?q=" +
     userData + "&api_key=BkaUZZWcFij6J7AoQj3WtPb1R2p9O6V9&limit=10";
@@ -150,17 +154,40 @@ $("#createBtns").on("click", ".newBtn", function () {
     for (var i = 0; i < results.length; i++) {
       var ratings = results[i];
       if (ratings.rating === "g" || ratings.rating === "pg") {
-        var secretImage = $('<img>').attr("class", "giphy");
-        var secretImage = $('<img>').attr("src", ratings.images.fixed_height_still.url);
-        var secret = secretImage.attr("id", "eachGif");
-        $("#giphyUpload").prepend(secretImage);
+        if (i <5){
+          var rates = "<p>Rating: "+ ratings.rating+"</p>";
+          var still = ratings.images.fixed_height_still.url;
+          var animate = ratings.images.fixed_height.url
+          var secret = $('<img>');
+          secretImage = secret.attr("data-state", "still");
+          secretImage = secret.attr("data-still", still);
+          secretImage = secret.attr("data-animate", animate);
+          secretImage = secret.attr("src", still);
+          secretImage = secret.attr("id", "eachGif");
+          $("#giphyUpload1").prepend(secretImage);
+          $("#giphyUpload1").prepend(rates);
+          console.log(rates)
+          }
+          else if (i>=5){
+            var rates = "<p>Rating: "+ ratings.rating+"</p>";
+            var still = ratings.images.fixed_height_still.url;
+            var animate = ratings.images.fixed_height.url
+            var secret = $('<img>');
+            secretImage = secret.attr("data-state", "still");
+            secretImage = secret.attr("data-still", still);
+            secretImage = secret.attr("data-animate", animate);
+            secretImage = secret.attr("src", still);
+            secretImage = secret.attr("id", "eachGif");
+            $("#giphyUpload2").prepend(secretImage);
+            $("#giphyUpload2").prepend(rates);
+          }
       }
     }
   });
 });
 
 //ability to click on still gif and watch it animate
-$("#giphyUpload").on("click", "#eachGif", function () {
+$("#giphyUpload1").on("click", "#eachGif", function () {
   var state = $(this).attr("data-state");
   var still = $(this).attr("data-still");
   var animate = $(this).attr("data-animate");
@@ -173,6 +200,21 @@ $("#giphyUpload").on("click", "#eachGif", function () {
     $(this).attr("data-state", "still");
   }
 });
+
+$("#giphyUpload2").on("click", "#eachGif", function () {
+  var state = $(this).attr("data-state");
+  var still = $(this).attr("data-still");
+  var animate = $(this).attr("data-animate");
+
+  if (state === "still") {
+    $(this).attr("src", animate);
+    $(this).attr("data-state", "animate");
+  } else {
+    $(this).attr("src", still);
+    $(this).attr("data-state", "still");
+  }
+});
+
 
 //array of selected keyterms hidden at bottom in case there are any cheaters!
 var hiddenWords = ["nebula", "mercury", "venus", "earth", "mars", "jupiter","saturn", "uranus", "neptune", "pluto", "rocket", "space",  "eclipse",  "meteor", "asteroid", "planet", "astronomy", "supernova", "spaceship", "astronaut", "orion", "telescope", "universe", "satellite", "alien", "apollo", "nasa"];
