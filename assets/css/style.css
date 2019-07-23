@@ -13,7 +13,7 @@ body {
     position: absolute;
     z-index: -1;
     overflow:hidden;
-    height: 200%;
+    height: 250%;
     width:100%;
     
 }
@@ -25,9 +25,9 @@ body {
     font-family: chocolate\ cake;
     opacity:0.3;
     width:170%;
-    height:300%;
+    height:250%;
     margin-top: -620px;
-    margin-left: 300px;
+    margin-left: 230px;
     font-size: 72px;
     color: rgb(255, 170, 42);
 }
@@ -39,7 +39,7 @@ body {
 .gifContainer {
     background-color: rgb(58, 138, 124);
     opacity: .3;
-    height: 940px;
+    height: 1250px;
     width:80%;
     padding:20px;
     margin-top: 10px;
@@ -50,6 +50,9 @@ body {
 #eachGif {
     padding: 10px;
     height:200px;
+}
+p{
+    margin-top:5px;
 }
 .whereBtn {
     background:wheat;
@@ -120,6 +123,10 @@ body::-webkit-scrollbar-thumb {
     background-color: rgb(114, 154, 207);
 }
 
+#rates{ 
+    position:relative;
+}
+
 #limit {
     margin-left: 30%;
     margin-top: 5px;
@@ -130,6 +137,8 @@ body::-webkit-scrollbar-thumb {
 .newBtn{
     margin:1px;
 }
+
+
 
 /* This is the hidden section. Everything in here appears when user discovers the correct word */
 .hiddenBadges{

@@ -91,6 +91,9 @@ $("#inputForm").on("submit", function (event) {
     for (var i = 0; i < results.length; i++) {
       var ratings = results[i];
       if (ratings.rating === "g" || ratings.rating === "pg") {
+        console.log(results)
+        if (i <5){
+        var rates = "<p>Rating: "+ ratings.rating+"</p>";
         var still = ratings.images.fixed_height_still.url;
         var animate = ratings.images.fixed_height.url
         var secret = $('<img>');
@@ -99,7 +102,23 @@ $("#inputForm").on("submit", function (event) {
         secretImage = secret.attr("data-animate", animate);
         secretImage = secret.attr("src", still);
         secretImage = secret.attr("id", "eachGif");
-        $("#giphyUpload").prepend(secretImage);
+        $("#giphyUpload1").prepend(secretImage);
+        $("#giphyUpload1").prepend(rates);
+        console.log(rates)
+        }
+        else if (i>=5){
+          var rates = "<p>Rating: "+ ratings.rating+"</p>";
+          var still = ratings.images.fixed_height_still.url;
+          var animate = ratings.images.fixed_height.url
+          var secret = $('<img>');
+          secretImage = secret.attr("data-state", "still");
+          secretImage = secret.attr("data-still", still);
+          secretImage = secret.attr("data-animate", animate);
+          secretImage = secret.attr("src", still);
+          secretImage = secret.attr("id", "eachGif");
+          $("#giphyUpload2").prepend(secretImage);
+          $("#giphyUpload2").prepend(rates);
+        }
       }
     }
 
