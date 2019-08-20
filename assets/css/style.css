@@ -138,8 +138,6 @@ body::-webkit-scrollbar-thumb {
     margin:1px;
 }
 
-
-
 /* This is the hidden section. Everything in here appears when user discovers the correct word */
 .hiddenBadges{
     position:absolute;
@@ -182,7 +180,6 @@ body::-webkit-scrollbar-thumb {
     justify-content: center;
     align-content: center;
 }
-
 
 /* media responsive */
 @media only screen and (max-width: 760px){
