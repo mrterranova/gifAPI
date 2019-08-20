@@ -1,4 +1,4 @@
-//global variables
+﻿//global variables
 let count = 17;
 let array = [];
 let badges = 15;
@@ -146,6 +146,7 @@ $("#createBtns").on("click", ".newBtn", function () {
   var gifURL = "https://api.giphy.com/v1/gifs/search?q=" +
     userData + "&api_key=BkaUZZWcFij6J7AoQj3WtPb1R2p9O6V9&limit=10";
 
+//ajax call to giphy
   $.ajax({
     url: gifURL,
     method: "GET"
