@@ -11,6 +11,7 @@ In this assignment, you'll use the GIPHY API to make a dynamic web page that pop
 ### Instructions
 
 1. Before you can make any part of your site work, you need to create an array of strings, each one related to a topic that interests you. Save it to a variable called `topics`.
+
    * We chose animals for our theme, but you can make a list to your own liking.
 
 2. Your app should take the topics in this array and create buttons in your HTML.
@@ -26,15 +27,13 @@ In this assignment, you'll use the GIPHY API to make a dynamic web page that pop
 
 6. Add a form to your page that takes a value from a user input box and adds it to your `topics` array. Then make a function call that takes each topic in the array and remakes the buttons on the page.
 
-7. Deploy your assignment to Github Pages.
-
-8. **Rejoice**! You just made something really cool.
+7. Deploy project to Github Pages.
 
 - - -
 ### Features Included
    
-  Features included in my project incorporates a hidden theme. The user is invited to discover the theme based on a trail of clues I left behind on the page. Once a certain number of terms are found then the screen will change. 
+  * Features included in my project incorporates a hidden theme. The user is invited to discover the theme based on a trail of clues I left behind on the page. Once a certain number of terms are found then the screen will change. 
   
-  Mobile Responsive
+  * Mobile Responsive
   
-  Added a clear button
+  * Added a clear button
