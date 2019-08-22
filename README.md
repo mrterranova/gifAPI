@@ -36,4 +36,4 @@ In this assignment, you'll use the GIPHY API to make a dynamic web page that pop
   
   * Mobile Responsive
   
-  * Added a clear button
+  * Added a clear button to clear the queue of giphs
