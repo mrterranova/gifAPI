@@ -6,8 +6,6 @@ My API Can be Observed Here: https://mrterranova.github.io/gifAPI/
 
 In this assignment, you'll use the GIPHY API to make a dynamic web page that populates with gifs of your choice. To finish this task, you must call the GIPHY API and use JavaScript and jQuery to change the HTML of your site.
 
-![GIPHY](Images/1-giphy.jpg)
-
 ### Instructions
 
 1. Before you can make any part of your site work, you need to create an array of strings, each one related to a topic that interests you. Save it to a variable called `topics`.
@@ -33,6 +31,8 @@ In this assignment, you'll use the GIPHY API to make a dynamic web page that pop
 ### Features Included
    
   * Features included in my project incorporates a hidden theme. The user is invited to discover the theme based on a trail of clues I left behind on the page. Once a certain number of terms are found then the screen will change. 
+
+  * Hints: Think about "SPACE" and you'll do fine finding the hidden theme.
   
   * Mobile Responsive
   
