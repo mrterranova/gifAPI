@@ -31,18 +31,21 @@ $("#inputForm").on("submit", function (event) {
     $("#createBtns").append("<button class='newBtn' data-secret='" + userWord + "'>" + userWord + "</button>");
     
     //if user word is secret word reward them below. First three words are hints to secret theme.
+//first answer = star
     if (userWord === "star" || userWord ==="stars") {
       $(".hiddenBadges").prepend("<img class='badgeEarned' id='hidden1' src='assets/images/star.png'>");
       $("#clue").text("I’m quite hot-tempered and don’t like to share. I have many children around me, one of them is very rare. I never go out, but at times you cannot see me, I hold so much together, but if I die you will cease to be.");
       count--;
       $("#countDown").text(count);
     }
+//second answer = sun
     if (userWord === "sun") {
       $(".hiddenBadges").prepend("<img class='badgeEarned' id='hidden2' src='assets/images/sun.png'>");
       $("#clue").text("I can be full, but i will never spill over. i disappear at times, but return i always will.");
       count--;
       $("#countDown").text(count);
     }
+// last answer = moon
     if (userWord === "moon") {
       $(".hiddenBadges").prepend("<img class='badgeEarned' id='hidden3' src='assets/images/moon.png'>");
       $("#clue").html("You’ve become a whiz at space. Now find <span id='countDown'>15</span> of anything space related to see what happens (key words are not plural forms)!");
